@@ -32,8 +32,9 @@ usageSnippet: >-
 copySnippet: |-
   npx skills add mblode/agent-skills -g --agent codex claude-code -y
 skillType: capability-pack
-skillLevel: intermediate
-verificationStatus: draft
+skillLevel: expert
+verificationStatus: validated
+verifiedAt: "2026-09-15"
 retrievalSources:
   - "https://github.com/mblode/agent-skills"
   - "https://raw.githubusercontent.com/mblode/agent-skills/main/README.md"
@@ -76,34 +77,64 @@ keywords:
   - PR reviewer skill
   - docs-writing skill
   - skills CLI
+hasPrerequisites: true
 robotsIndex: true
 robotsFollow: true
 ---
 
 # mblode/agent-skills
 
-`mblode/agent-skills` is an open-source Agent Skills collection focused on
-shipping polished UI, typography, documentation, pull requests, and releases.
-It installs as a pack through the skills CLI and exposes focused `SKILL.md`
-workflows agents can load by name.
+`mblode/agent-skills` is an open-source Agent Skills collection for polished
+UI, typography, documentation, pull requests, and releases. It installs through
+the skills CLI and exposes focused `SKILL.md` workflows agents can load by name.
 
 Homepage: [blode.co/agent-skills](https://blode.co/agent-skills)
 
-## Install
+## Knowledge Freshness
+
+Source of truth is the public `mblode/agent-skills` repository and homepage.
+Skill names, install command, and documentation URLs should be re-checked against
+`main` before relying on a specific skill path or CLI flag.
+
+## Retrieval Sources
+
+- Repository: https://github.com/mblode/agent-skills
+- README: https://raw.githubusercontent.com/mblode/agent-skills/main/README.md
+- Homepage: https://blode.co/agent-skills
+- Example skills: `ui-design`, `typography-audit`, `pr-reviewer`, `docs-writing`
+- License: https://raw.githubusercontent.com/mblode/agent-skills/main/LICENSE
+
+## Core Workflow
+
+1. Install the pack with the skills CLI for your agent host.
+2. Start the UI, docs, PR, or release task in the agent.
+3. Let the host load the matching skill (`ui-design`, `typography-audit`,
+   `docs-writing`, `pr-reviewer`, `autoship`, etc.).
+4. Review file-level suggestions, PR text, or release notes before merging.
 
 ```bash
 npx skills add mblode/agent-skills -g --agent codex claude-code -y
 ```
 
-## Included skills
+## Capability Scope
 
-The pack currently includes skills such as `ui-design`, `ui-verification`,
-`typography-audit`, `ui-animation`, `docs-writing`, `readme-creator`,
-`pr-reviewer`, `pr-creator`, `pr-babysitter`, `autoship`,
-`product-design`, `seo`, and `agent-skills-creator`.
+In scope:
 
-## When to use
+- UI direction, verification, animation, and typography audits
+- Documentation and README authoring
+- PR creation, review, and babysitting workflows
+- Release/autoship oriented skills
+- Skill-authoring helpers such as `agent-skills-creator`
 
-- Auditing AI-generated UI for visual and interaction defects
-- Enforcing typography and documentation quality before merge
-- Driving PR review, creation, and release note workflows from an agent host
+Out of scope:
+
+- Hosting third-party paid APIs or proprietary design systems
+- Unattended production deploys without human review
+
+## Production Rules
+
+- Keep install pinned to the public GitHub source; do not mirror unreviewed forks.
+- Treat skill output as draft guidance: verify UI diffs, docs, and PR text.
+- Do not feed secrets, tokens, or private customer data into skill prompts.
+- Prefer the documented skills CLI install path over copying individual folders
+  unless your host requires local `SKILL.md` placement.
