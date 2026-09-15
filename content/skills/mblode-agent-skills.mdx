@@ -1,0 +1,109 @@
+---
+title: mblode/agent-skills
+slug: mblode-agent-skills
+category: skills
+description: >-
+  Open-source Agent Skills collection for UI audits, typography, documentation,
+  PR review, and releases, installable with the skills CLI for Claude Code,
+  Codex, and other skills-compatible agents.
+cardDescription: >-
+  26 Agent Skills for UI audits, typography, docs, PR review, and releases.
+seoTitle: mblode/agent-skills for Claude Code, Codex, and Agent Skills hosts
+seoDescription: >-
+  Install mblode/agent-skills to give Claude Code, Codex, and other agents
+  reusable skills for UI audits, typography, documentation, PR review, and
+  release workflows via the skills CLI.
+author: mblode
+authorProfileUrl: "https://github.com/mblode"
+submittedBy: mblode
+submittedByUrl: "https://github.com/mblode"
+dateAdded: "2026-09-15"
+submittedAt: "2026-09-15"
+websiteUrl: "https://blode.co/agent-skills"
+documentationUrl: "https://github.com/mblode/agent-skills#readme"
+repoUrl: "https://github.com/mblode/agent-skills"
+downloadUrl: "https://github.com/mblode/agent-skills/archive/refs/heads/main.zip"
+installable: true
+installCommand: "npx skills add mblode/agent-skills -g --agent codex claude-code -y"
+usageSnippet: >-
+  Install the collection with the skills CLI, then invoke individual skills such
+  as ui-design, typography-audit, docs-writing, pr-reviewer, or autoship when the
+  matching workflow starts.
+copySnippet: |-
+  npx skills add mblode/agent-skills -g --agent codex claude-code -y
+skillType: capability-pack
+skillLevel: intermediate
+verificationStatus: draft
+retrievalSources:
+  - "https://github.com/mblode/agent-skills"
+  - "https://raw.githubusercontent.com/mblode/agent-skills/main/README.md"
+  - "https://blode.co/agent-skills"
+  - "https://raw.githubusercontent.com/mblode/agent-skills/main/skills/ui-design/SKILL.md"
+  - "https://raw.githubusercontent.com/mblode/agent-skills/main/skills/typography-audit/SKILL.md"
+  - "https://raw.githubusercontent.com/mblode/agent-skills/main/skills/pr-reviewer/SKILL.md"
+  - "https://raw.githubusercontent.com/mblode/agent-skills/main/skills/docs-writing/SKILL.md"
+  - "https://raw.githubusercontent.com/mblode/agent-skills/main/LICENSE"
+sourceUrls:
+  - "https://github.com/mblode/agent-skills"
+  - "https://github.com/mblode/agent-skills/blob/main/README.md"
+  - "https://blode.co/agent-skills"
+testedPlatforms:
+  - Claude Code
+  - Codex
+  - Skills-compatible agent hosts
+prerequisites:
+  - "A skills-compatible agent host such as Claude Code or Codex."
+  - "Node.js available to run the skills CLI install command."
+safetyNotes:
+  - "Skills can guide agents to read and edit repository files, open PRs, and run local commands as part of UI, docs, and release workflows."
+  - "Review generated PR descriptions, release notes, and UI changes before merging or publishing."
+privacyNotes:
+  - "Skill workflows may expose local file paths, PR contents, design copy, and repository metadata in agent context."
+  - "Do not paste secrets, tokens, or private customer data into prompts when running these skills."
+tags:
+  - agent-skills
+  - ui
+  - typography
+  - documentation
+  - pr-review
+  - releases
+  - claude-code
+  - codex
+keywords:
+  - mblode agent-skills
+  - UI audit skills
+  - typography-audit skill
+  - PR reviewer skill
+  - docs-writing skill
+  - skills CLI
+robotsIndex: true
+robotsFollow: true
+---
+
+# mblode/agent-skills
+
+`mblode/agent-skills` is an open-source Agent Skills collection focused on
+shipping polished UI, typography, documentation, pull requests, and releases.
+It installs as a pack through the skills CLI and exposes focused `SKILL.md`
+workflows agents can load by name.
+
+Homepage: [blode.co/agent-skills](https://blode.co/agent-skills)
+
+## Install
+
+```bash
+npx skills add mblode/agent-skills -g --agent codex claude-code -y
+```
+
+## Included skills
+
+The pack currently includes skills such as `ui-design`, `ui-verification`,
+`typography-audit`, `ui-animation`, `docs-writing`, `readme-creator`,
+`pr-reviewer`, `pr-creator`, `pr-babysitter`, `autoship`,
+`product-design`, `seo`, and `agent-skills-creator`.
+
+## When to use
+
+- Auditing AI-generated UI for visual and interaction defects
+- Enforcing typography and documentation quality before merge
+- Driving PR review, creation, and release note workflows from an agent host
